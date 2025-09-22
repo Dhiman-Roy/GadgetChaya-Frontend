@@ -1,0 +1,960 @@
+[
+  {
+    "id": "MNNL",
+    "productName": "Sony Speaker 1",
+    "brand": "Sony",
+    "category": "Speaker",
+    "specification": {
+      "type": "Smart Speaker",
+      "battery": "10 hours",
+      "waterproof": "IPX4",
+      "powerOutput": "60W"
+    },
+    "price": 150651,
+    "currency": "BDT",
+    "image": "https://example.com/images/sonyspeaker1.jpg",
+    "warranty": "6 Months",
+    "availability": "In Stock"
+  },
+  {
+    "id": "WOXE",
+    "productName": "Google Smartphone 2",
+    "brand": "Google",
+    "category": "Smartphone",
+    "specification": {
+      "display": "6.8-inch Dynamic AMOLED",
+      "processor": "Dimensity 9200",
+      "ram": "12GB",
+      "storage": "128GB",
+      "camera": "48MP + 12MP + 12MP",
+      "battery": "4500mAh",
+      "os": "Android 13"
+    },
+    "price": 181607,
+    "currency": "BDT",
+    "image": "https://example.com/images/googlesmartphone2.jpg",
+    "warranty": "2 Years",
+    "availability": "In Stock"
+  },
+  {
+    "id": "8KCE",
+    "productName": "Sony Speaker 3",
+    "brand": "Sony",
+    "category": "Speaker",
+    "specification": {
+      "type": "Portable",
+      "battery": "15 hours",
+      "waterproof": "IPX4",
+      "powerOutput": "20W"
+    },
+    "price": 202738,
+    "currency": "BDT",
+    "image": "https://example.com/images/sonyspeaker3.jpg",
+    "warranty": "6 Months",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "CRRP",
+    "productName": "Belkin Accessory 4",
+    "brand": "Belkin",
+    "category": "Accessory",
+    "specification": {
+      "type": "Charger",
+      "connectivity": "Wireless",
+      "capacity": "10000mAh",
+      "fastCharging": "No"
+    },
+    "price": 10984,
+    "currency": "BDT",
+    "image": "https://example.com/images/belkinaccessory4.jpg",
+    "warranty": "2 Years",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "NCRM",
+    "productName": "Sony Speaker 5",
+    "brand": "Sony",
+    "category": "Speaker",
+    "specification": {
+      "type": "Portable",
+      "battery": "15 hours",
+      "waterproof": "No",
+      "powerOutput": "20W"
+    },
+    "price": 238091,
+    "currency": "BDT",
+    "image": "https://example.com/images/sonyspeaker5.jpg",
+    "warranty": "2 Years",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "AQNF",
+    "productName": "Amazfit Smartwatch 6",
+    "brand": "Amazfit",
+    "category": "Smartwatch",
+    "specification": {
+      "display": "1.6-inch OLED",
+      "chipset": "S9 SiP",
+      "storage": "16GB",
+      "battery": "36 hours",
+      "features": [
+        "GPS",
+        "Sleep Tracking",
+        "Blood Oxygen"
+      ]
+    },
+    "price": 125745,
+    "currency": "BDT",
+    "image": "https://example.com/images/amazfitsmartwatch6.jpg",
+    "warranty": "6 Months",
+    "availability": "In Stock"
+  },
+  {
+    "id": "2TW3",
+    "productName": "Logitech Accessory 7",
+    "brand": "Logitech",
+    "category": "Accessory",
+    "specification": {
+      "type": "Charger",
+      "connectivity": "USB-C",
+      "capacity": "20000mAh",
+      "fastCharging": "No"
+    },
+    "price": 100302,
+    "currency": "BDT",
+    "image": "https://example.com/images/logitechaccessory7.jpg",
+    "warranty": "6 Months",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "933F",
+    "productName": "Marshall Speaker 8",
+    "brand": "Marshall",
+    "category": "Speaker",
+    "specification": {
+      "type": "Portable",
+      "battery": "10 hours",
+      "waterproof": "IPX4",
+      "powerOutput": "60W"
+    },
+    "price": 99474,
+    "currency": "BDT",
+    "image": "https://example.com/images/marshallspeaker8.jpg",
+    "warranty": "6 Months",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "LA30",
+    "productName": "Samsung Smartwatch 9",
+    "brand": "Samsung",
+    "category": "Smartwatch",
+    "specification": {
+      "display": "1.4-inch AMOLED",
+      "chipset": "Snapdragon W5+",
+      "storage": "16GB",
+      "battery": "36 hours",
+      "features": [
+        "Heart Rate",
+        "GPS",
+        "ECG"
+      ]
+    },
+    "price": 55465,
+    "currency": "BDT",
+    "image": "https://example.com/images/samsungsmartwatch9.jpg",
+    "warranty": "1 Year",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "JC2P",
+    "productName": "Apple Laptop 10",
+    "brand": "Apple",
+    "category": "Laptop",
+    "specification": {
+      "display": "13.6-inch Retina",
+      "processor": "Ryzen 9 7940HS",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "gpu": "Integrated GPU",
+      "battery": "86Wh",
+      "os": "Windows 11"
+    },
+    "price": 212968,
+    "currency": "BDT",
+    "image": "https://example.com/images/applelaptop10.jpg",
+    "warranty": "2 Years",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "H5B9",
+    "productName": "Sony Speaker 11",
+    "brand": "Sony",
+    "category": "Speaker",
+    "specification": {
+      "type": "Home",
+      "battery": "10 hours",
+      "waterproof": "IP67",
+      "powerOutput": "20W"
+    },
+    "price": 189746,
+    "currency": "BDT",
+    "image": "https://example.com/images/sonyspeaker11.jpg",
+    "warranty": "1 Year",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "XX7Z",
+    "productName": "Google Smartphone 12",
+    "brand": "Google",
+    "category": "Smartphone",
+    "specification": {
+      "display": "6.8-inch Dynamic AMOLED",
+      "processor": "Dimensity 9200",
+      "ram": "8GB",
+      "storage": "512GB",
+      "camera": "48MP + 12MP + 12MP",
+      "battery": "4200mAh",
+      "os": "iOS 17"
+    },
+    "price": 181010,
+    "currency": "BDT",
+    "image": "https://example.com/images/googlesmartphone12.jpg",
+    "warranty": "2 Years",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "3X7W",
+    "productName": "Apple Tablet 13",
+    "brand": "Apple",
+    "category": "Tablet",
+    "specification": {
+      "display": "12.9-inch Retina",
+      "processor": "Snapdragon 8cx",
+      "ram": "6GB",
+      "storage": "256GB",
+      "battery": "10758mAh",
+      "os": "Android 13"
+    },
+    "price": 33942,
+    "currency": "BDT",
+    "image": "https://example.com/images/appletablet13.jpg",
+    "warranty": "2 Years",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "GI1C",
+    "productName": "Garmin Smartwatch 14",
+    "brand": "Garmin",
+    "category": "Smartwatch",
+    "specification": {
+      "display": "1.9-inch Retina",
+      "chipset": "Exynos W930",
+      "storage": "32GB",
+      "battery": "18 hours",
+      "features": [
+        "GPS",
+        "Sleep Tracking",
+        "Blood Oxygen"
+      ]
+    },
+    "price": 68172,
+    "currency": "BDT",
+    "image": "https://example.com/images/garminsmartwatch14.jpg",
+    "warranty": "2 Years",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "VTLZ",
+    "productName": "Anker Speaker 15",
+    "brand": "Anker",
+    "category": "Speaker",
+    "specification": {
+      "type": "Portable",
+      "battery": "20 hours",
+      "waterproof": "IP67",
+      "powerOutput": "20W"
+    },
+    "price": 60638,
+    "currency": "BDT",
+    "image": "https://example.com/images/ankerspeaker15.jpg",
+    "warranty": "1 Year",
+    "availability": "In Stock"
+  },
+  {
+    "id": "NW1J",
+    "productName": "Apple Smartwatch 16",
+    "brand": "Apple",
+    "category": "Smartwatch",
+    "specification": {
+      "display": "1.4-inch AMOLED",
+      "chipset": "Exynos W930",
+      "storage": "16GB",
+      "battery": "48 hours",
+      "features": [
+        "Blood Oxygen",
+        "GPS",
+        "Sleep Tracking"
+      ]
+    },
+    "price": 213699,
+    "currency": "BDT",
+    "image": "https://example.com/images/applesmartwatch16.jpg",
+    "warranty": "2 Years",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "1TNH",
+    "productName": "OnePlus Smartphone 17",
+    "brand": "OnePlus",
+    "category": "Smartphone",
+    "specification": {
+      "display": "6.7-inch AMOLED",
+      "processor": "Dimensity 9200",
+      "ram": "12GB",
+      "storage": "512GB",
+      "camera": "200MP + 12MP + 10MP",
+      "battery": "5000mAh",
+      "os": "Android 14"
+    },
+    "price": 129228,
+    "currency": "BDT",
+    "image": "https://example.com/images/oneplussmartphone17.jpg",
+    "warranty": "1 Year",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "7M7O",
+    "productName": "Huawei Tablet 18",
+    "brand": "Huawei",
+    "category": "Tablet",
+    "specification": {
+      "display": "12.9-inch Retina",
+      "processor": "Snapdragon 8cx",
+      "ram": "12GB",
+      "storage": "256GB",
+      "battery": "10000mAh",
+      "os": "Android 13"
+    },
+    "price": 53430,
+    "currency": "BDT",
+    "image": "https://example.com/images/huaweitablet18.jpg",
+    "warranty": "2 Years",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "8FGT",
+    "productName": "Apple Tablet 19",
+    "brand": "Apple",
+    "category": "Tablet",
+    "specification": {
+      "display": "10.5-inch AMOLED",
+      "processor": "Kirin 9000",
+      "ram": "12GB",
+      "storage": "128GB",
+      "battery": "10758mAh",
+      "os": "iPadOS 16"
+    },
+    "price": 238307,
+    "currency": "BDT",
+    "image": "https://example.com/images/appletablet19.jpg",
+    "warranty": "6 Months",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "3GTD",
+    "productName": "Asus Laptop 20",
+    "brand": "Asus",
+    "category": "Laptop",
+    "specification": {
+      "display": "15.6-inch 4K OLED",
+      "processor": "M2 Chip",
+      "ram": "8GB",
+      "storage": "512GB SSD",
+      "gpu": "Integrated GPU",
+      "battery": "60Wh",
+      "os": "macOS Ventura"
+    },
+    "price": 188996,
+    "currency": "BDT",
+    "image": "https://example.com/images/asuslaptop20.jpg",
+    "warranty": "6 Months",
+    "availability": "In Stock"
+  },
+  {
+    "id": "ZLOZ",
+    "productName": "Marshall Speaker 21",
+    "brand": "Marshall",
+    "category": "Speaker",
+    "specification": {
+      "type": "Portable",
+      "battery": "10 hours",
+      "waterproof": "IPX4",
+      "powerOutput": "60W"
+    },
+    "price": 217917,
+    "currency": "BDT",
+    "image": "https://example.com/images/marshallspeaker21.jpg",
+    "warranty": "6 Months",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "KJCO",
+    "productName": "Google Smartphone 22",
+    "brand": "Google",
+    "category": "Smartphone",
+    "specification": {
+      "display": "6.7-inch AMOLED",
+      "processor": "Snapdragon 8 Gen 2",
+      "ram": "8GB",
+      "storage": "512GB",
+      "camera": "48MP + 12MP + 12MP",
+      "battery": "4500mAh",
+      "os": "Android 13"
+    },
+    "price": 125520,
+    "currency": "BDT",
+    "image": "https://example.com/images/googlesmartphone22.jpg",
+    "warranty": "6 Months",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "WYO0",
+    "productName": "Beats Headphones 23",
+    "brand": "Beats",
+    "category": "Headphones",
+    "specification": {
+      "type": "Over-Ear",
+      "connectivity": "Bluetooth 5.3",
+      "noiseCancellation": "Yes",
+      "battery": "30 hours"
+    },
+    "price": 125544,
+    "currency": "BDT",
+    "image": "https://example.com/images/beatsheadphones23.jpg",
+    "warranty": "6 Months",
+    "availability": "In Stock"
+  },
+  {
+    "id": "XZQU",
+    "productName": "Samsung Smartwatch 24",
+    "brand": "Samsung",
+    "category": "Smartwatch",
+    "specification": {
+      "display": "1.6-inch OLED",
+      "chipset": "Snapdragon W5+",
+      "storage": "32GB",
+      "battery": "18 hours",
+      "features": [
+        "Heart Rate",
+        "Blood Oxygen",
+        "ECG"
+      ]
+    },
+    "price": 48924,
+    "currency": "BDT",
+    "image": "https://example.com/images/samsungsmartwatch24.jpg",
+    "warranty": "6 Months",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "LGPP",
+    "productName": "Belkin Accessory 25",
+    "brand": "Belkin",
+    "category": "Accessory",
+    "specification": {
+      "type": "Mouse",
+      "connectivity": "Wireless",
+      "capacity": "N/A",
+      "fastCharging": "Yes"
+    },
+    "price": 201155,
+    "currency": "BDT",
+    "image": "https://example.com/images/belkinaccessory25.jpg",
+    "warranty": "6 Months",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "6175",
+    "productName": "Apple Tablet 26",
+    "brand": "Apple",
+    "category": "Tablet",
+    "specification": {
+      "display": "11-inch LCD",
+      "processor": "M2 Chip",
+      "ram": "8GB",
+      "storage": "128GB",
+      "battery": "10000mAh",
+      "os": "Android 13"
+    },
+    "price": 98399,
+    "currency": "BDT",
+    "image": "https://example.com/images/appletablet26.jpg",
+    "warranty": "1 Year",
+    "availability": "In Stock"
+  },
+  {
+    "id": "HPGC",
+    "productName": "Beats Headphones 27",
+    "brand": "Beats",
+    "category": "Headphones",
+    "specification": {
+      "type": "Over-Ear",
+      "connectivity": "Bluetooth 5.3",
+      "noiseCancellation": "No",
+      "battery": "40 hours"
+    },
+    "price": 201012,
+    "currency": "BDT",
+    "image": "https://example.com/images/beatsheadphones27.jpg",
+    "warranty": "2 Years",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "AOL9",
+    "productName": "Samsung Tablet 28",
+    "brand": "Samsung",
+    "category": "Tablet",
+    "specification": {
+      "display": "11-inch LCD",
+      "processor": "Kirin 9000",
+      "ram": "6GB",
+      "storage": "128GB",
+      "battery": "10758mAh",
+      "os": "iPadOS 16"
+    },
+    "price": 86925,
+    "currency": "BDT",
+    "image": "https://example.com/images/samsungtablet28.jpg",
+    "warranty": "6 Months",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "MNIC",
+    "productName": "Samsung Smartwatch 29",
+    "brand": "Samsung",
+    "category": "Smartwatch",
+    "specification": {
+      "display": "1.9-inch Retina",
+      "chipset": "S9 SiP",
+      "storage": "16GB",
+      "battery": "18 hours",
+      "features": [
+        "GPS",
+        "Blood Oxygen",
+        "Sleep Tracking"
+      ]
+    },
+    "price": 56252,
+    "currency": "BDT",
+    "image": "https://example.com/images/samsungsmartwatch29.jpg",
+    "warranty": "2 Years",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "W09H",
+    "productName": "Amazfit Smartwatch 30",
+    "brand": "Amazfit",
+    "category": "Smartwatch",
+    "specification": {
+      "display": "1.6-inch OLED",
+      "chipset": "Snapdragon W5+",
+      "storage": "16GB",
+      "battery": "36 hours",
+      "features": [
+        "Blood Oxygen",
+        "ECG",
+        "Heart Rate"
+      ]
+    },
+    "price": 200659,
+    "currency": "BDT",
+    "image": "https://example.com/images/amazfitsmartwatch30.jpg",
+    "warranty": "2 Years",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "PRNU",
+    "productName": "Logitech Accessory 31",
+    "brand": "Logitech",
+    "category": "Accessory",
+    "specification": {
+      "type": "Keyboard",
+      "connectivity": "Wireless",
+      "capacity": "10000mAh",
+      "fastCharging": "Yes"
+    },
+    "price": 205112,
+    "currency": "BDT",
+    "image": "https://example.com/images/logitechaccessory31.jpg",
+    "warranty": "2 Years",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "0EZK",
+    "productName": "Lenovo Laptop 32",
+    "brand": "Lenovo",
+    "category": "Laptop",
+    "specification": {
+      "display": "13.6-inch Retina",
+      "processor": "Ryzen 9 7940HS",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "gpu": "RTX 4060",
+      "battery": "90Wh",
+      "os": "macOS Ventura"
+    },
+    "price": 157190,
+    "currency": "BDT",
+    "image": "https://example.com/images/lenovolaptop32.jpg",
+    "warranty": "1 Year",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "G1TX",
+    "productName": "Amazfit Smartwatch 33",
+    "brand": "Amazfit",
+    "category": "Smartwatch",
+    "specification": {
+      "display": "1.4-inch AMOLED",
+      "chipset": "S9 SiP",
+      "storage": "16GB",
+      "battery": "36 hours",
+      "features": [
+        "Blood Oxygen",
+        "Heart Rate",
+        "Sleep Tracking"
+      ]
+    },
+    "price": 85707,
+    "currency": "BDT",
+    "image": "https://example.com/images/amazfitsmartwatch33.jpg",
+    "warranty": "2 Years",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "CDGS",
+    "productName": "Sony Headphones 34",
+    "brand": "Sony",
+    "category": "Headphones",
+    "specification": {
+      "type": "On-Ear",
+      "connectivity": "Wired 3.5mm",
+      "noiseCancellation": "Yes",
+      "battery": "20 hours"
+    },
+    "price": 72840,
+    "currency": "BDT",
+    "image": "https://example.com/images/sonyheadphones34.jpg",
+    "warranty": "6 Months",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "Z14J",
+    "productName": "HP Laptop 35",
+    "brand": "HP",
+    "category": "Laptop",
+    "specification": {
+      "display": "13.6-inch Retina",
+      "processor": "M2 Chip",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "gpu": "RTX 4060",
+      "battery": "86Wh",
+      "os": "macOS Ventura"
+    },
+    "price": 159321,
+    "currency": "BDT",
+    "image": "https://example.com/images/hplaptop35.jpg",
+    "warranty": "1 Year",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "23KV",
+    "productName": "Apple Smartwatch 36",
+    "brand": "Apple",
+    "category": "Smartwatch",
+    "specification": {
+      "display": "1.4-inch AMOLED",
+      "chipset": "S9 SiP",
+      "storage": "32GB",
+      "battery": "18 hours",
+      "features": [
+        "GPS",
+        "Heart Rate",
+        "Sleep Tracking"
+      ]
+    },
+    "price": 245933,
+    "currency": "BDT",
+    "image": "https://example.com/images/applesmartwatch36.jpg",
+    "warranty": "1 Year",
+    "availability": "In Stock"
+  },
+  {
+    "id": "NA14",
+    "productName": "Belkin Accessory 37",
+    "brand": "Belkin",
+    "category": "Accessory",
+    "specification": {
+      "type": "Mouse",
+      "connectivity": "USB-C",
+      "capacity": "20000mAh",
+      "fastCharging": "No"
+    },
+    "price": 131280,
+    "currency": "BDT",
+    "image": "https://example.com/images/belkinaccessory37.jpg",
+    "warranty": "2 Years",
+    "availability": "In Stock"
+  },
+  {
+    "id": "MLLB",
+    "productName": "Logitech Accessory 38",
+    "brand": "Logitech",
+    "category": "Accessory",
+    "specification": {
+      "type": "Mouse",
+      "connectivity": "USB-C",
+      "capacity": "N/A",
+      "fastCharging": "Yes"
+    },
+    "price": 224410,
+    "currency": "BDT",
+    "image": "https://example.com/images/logitechaccessory38.jpg",
+    "warranty": "1 Year",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "KW1I",
+    "productName": "JBL Headphones 39",
+    "brand": "JBL",
+    "category": "Headphones",
+    "specification": {
+      "type": "Over-Ear",
+      "connectivity": "Bluetooth 5.3",
+      "noiseCancellation": "No",
+      "battery": "20 hours"
+    },
+    "price": 153651,
+    "currency": "BDT",
+    "image": "https://example.com/images/jblheadphones39.jpg",
+    "warranty": "6 Months",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "KKD7",
+    "productName": "Garmin Smartwatch 40",
+    "brand": "Garmin",
+    "category": "Smartwatch",
+    "specification": {
+      "display": "1.6-inch OLED",
+      "chipset": "Snapdragon W5+",
+      "storage": "16GB",
+      "battery": "18 hours",
+      "features": [
+        "Sleep Tracking",
+        "ECG",
+        "GPS"
+      ]
+    },
+    "price": 109369,
+    "currency": "BDT",
+    "image": "https://example.com/images/garminsmartwatch40.jpg",
+    "warranty": "2 Years",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "UK9X",
+    "productName": "Apple Tablet 41",
+    "brand": "Apple",
+    "category": "Tablet",
+    "specification": {
+      "display": "10.5-inch AMOLED",
+      "processor": "Snapdragon 8cx",
+      "ram": "12GB",
+      "storage": "256GB",
+      "battery": "10000mAh",
+      "os": "iPadOS 16"
+    },
+    "price": 23874,
+    "currency": "BDT",
+    "image": "https://example.com/images/appletablet41.jpg",
+    "warranty": "6 Months",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "UWOC",
+    "productName": "HP Laptop 42",
+    "brand": "HP",
+    "category": "Laptop",
+    "specification": {
+      "display": "16-inch IPS",
+      "processor": "M2 Chip",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "gpu": "RTX 4060",
+      "battery": "90Wh",
+      "os": "macOS Ventura"
+    },
+    "price": 236789,
+    "currency": "BDT",
+    "image": "https://example.com/images/hplaptop42.jpg",
+    "warranty": "1 Year",
+    "availability": "Pre-Order"
+  },
+  {
+    "id": "CQSU",
+    "productName": "Asus Laptop 43",
+    "brand": "Asus",
+    "category": "Laptop",
+    "specification": {
+      "display": "15.6-inch 4K OLED",
+      "processor": "Ryzen 9 7940HS",
+      "ram": "8GB",
+      "storage": "512GB SSD",
+      "gpu": "Integrated GPU",
+      "battery": "90Wh",
+      "os": "Windows 11"
+    },
+    "price": 129409,
+    "currency": "BDT",
+    "image": "https://example.com/images/asuslaptop43.jpg",
+    "warranty": "1 Year",
+    "availability": "In Stock"
+  },
+  {
+    "id": "4UDT",
+    "productName": "Huawei Tablet 44",
+    "brand": "Huawei",
+    "category": "Tablet",
+    "specification": {
+      "display": "11-inch LCD",
+      "processor": "Snapdragon 8cx",
+      "ram": "8GB",
+      "storage": "512GB",
+      "battery": "8000mAh",
+      "os": "iPadOS 16"
+    },
+    "price": 18383,
+    "currency": "BDT",
+    "image": "https://example.com/images/huaweitablet44.jpg",
+    "warranty": "1 Year",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "IGWS",
+    "productName": "Microsoft Tablet 45",
+    "brand": "Microsoft",
+    "category": "Tablet",
+    "specification": {
+      "display": "10.5-inch AMOLED",
+      "processor": "Kirin 9000",
+      "ram": "12GB",
+      "storage": "128GB",
+      "battery": "8000mAh",
+      "os": "iPadOS 16"
+    },
+    "price": 206725,
+    "currency": "BDT",
+    "image": "https://example.com/images/microsofttablet45.jpg",
+    "warranty": "6 Months",
+    "availability": "In Stock"
+  },
+  {
+    "id": "4H4X",
+    "productName": "Marshall Speaker 46",
+    "brand": "Marshall",
+    "category": "Speaker",
+    "specification": {
+      "type": "Portable",
+      "battery": "10 hours",
+      "waterproof": "No",
+      "powerOutput": "40W"
+    },
+    "price": 77773,
+    "currency": "BDT",
+    "image": "https://example.com/images/marshallspeaker46.jpg",
+    "warranty": "2 Years",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "M001",
+    "productName": "Lenovo Laptop 47",
+    "brand": "Lenovo",
+    "category": "Laptop",
+    "specification": {
+      "display": "13.6-inch Retina",
+      "processor": "M2 Chip",
+      "ram": "32GB",
+      "storage": "512GB SSD",
+      "gpu": "RTX 4070",
+      "battery": "60Wh",
+      "os": "macOS Ventura"
+    },
+    "price": 208061,
+    "currency": "BDT",
+    "image": "https://example.com/images/lenovolaptop47.jpg",
+    "warranty": "1 Year",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "TSZH",
+    "productName": "HP Laptop 48",
+    "brand": "HP",
+    "category": "Laptop",
+    "specification": {
+      "display": "15.6-inch 4K OLED",
+      "processor": "Intel i7 13th Gen",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "gpu": "RTX 4070",
+      "battery": "60Wh",
+      "os": "macOS Ventura"
+    },
+    "price": 9181,
+    "currency": "BDT",
+    "image": "https://example.com/images/hplaptop48.jpg",
+    "warranty": "6 Months",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": "XONH",
+    "productName": "Google Smartphone 49",
+    "brand": "Google",
+    "category": "Smartphone",
+    "specification": {
+      "display": "6.7-inch AMOLED",
+      "processor": "Dimensity 9200",
+      "ram": "16GB",
+      "storage": "512GB",
+      "camera": "48MP + 12MP + 12MP",
+      "battery": "5000mAh",
+      "os": "Android 13"
+    },
+    "price": 138413,
+    "currency": "BDT",
+    "image": "https://example.com/images/googlesmartphone49.jpg",
+    "warranty": "1 Year",
+    "availability": "In Stock"
+  },
+  {
+    "id": "HXE6",
+    "productName": "Apple Laptop 50",
+    "brand": "Apple",
+    "category": "Laptop",
+    "specification": {
+      "display": "15.6-inch 4K OLED",
+      "processor": "Ryzen 9 7940HS",
+      "ram": "8GB",
+      "storage": "1TB SSD",
+      "gpu": "Integrated GPU",
+      "battery": "86Wh",
+      "os": "Windows 11"
+    },
+    "price": 16728,
+    "currency": "BDT",
+    "image": "https://example.com/images/applelaptop50.jpg",
+    "warranty": "6 Months",
+    "availability": "Pre-Order"
+  }
+]
