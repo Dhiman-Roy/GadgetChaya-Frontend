@@ -19,7 +19,11 @@ function App() {
   return (
     <>
       {drawer && <Backdrop onClick={closeDrawer} />}
-      <MainNavigation onClick={openDrawer} />
+      <MainNavigation
+        onOpen={openDrawer}
+        onClose={closeDrawer}
+        drawer={drawer}
+      />
       {/* <main>{routes}</main> */}
     </>
   );
