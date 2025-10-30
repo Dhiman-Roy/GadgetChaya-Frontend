@@ -33,14 +33,18 @@ function SideDrawer(props) {
     );
   });
   return (
-    <div className="fixed top-0 left-0 min-w-52 bg-gray-700 text-white z-20 h-full opacity-95">
-      <div className="flex items-center justify-between p-4  ">
-        <h2 className="text-2xl text-amber-600">Menu</h2>
-        <div onClick={props.onClose}>
-          <MdOutlineCancel className="text-2xl text-red-400" />
+    <div>
+      <div className="fixed top-0 left-0 min-w-52 bg-gray-700 text-white z-20 h-full opacity-95 lg:hidden">
+        <div className="flex items-center justify-between p-4  ">
+          <h2 className="text-2xl text-amber-600">Menu</h2>
+          <div onClick={props.onClose}>
+            <MdOutlineCancel className="text-2xl text-red-400" />
+          </div>
         </div>
+        <div className="overflow-y-auto h-full ">{drawerContent}</div>
       </div>
-      <div className="overflow-y-auto h-full">{drawerContent}</div>
+
+
     </div>
   );
 }

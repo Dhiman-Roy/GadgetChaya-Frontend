@@ -18,7 +18,7 @@ function App() {
   // }
   return (
     <>
-      {drawer && <Backdrop onClick={closeDrawer} />}
+      {drawer && <div className="lg:hidden"><Backdrop onClick={closeDrawer} /></div>}
       <MainNavigation
         onOpen={openDrawer}
         onClose={closeDrawer}

@@ -13,7 +13,7 @@ function MainHeader(props) {
         <div className="flex gap-2 items-center pl-3">
           <button
             onClick={props.onOpen}
-            className="w-9 h-9 p-0.5  border-gray-400 border-2 rounded flex flex-wrap items-center"
+            className="w-9 h-9 p-0.5  border-gray-400 border-2 rounded flex flex-wrap items-center lg:hidden"
           >
             <div className="w-full rounded-2xl h-0.5 bg-white"></div>
             <div className="w-full rounded-2xl h-0.5 bg-white"></div>
@@ -51,7 +51,6 @@ function MainHeader(props) {
           <input
             type="text"
             className="bg-white rounded font-bold p-1"
-            placeholder="search here"
           ></input>
           <button type="submit" className="rounded">
             <FaSearch className="bg-amber-600 w-8 h-8 p-1 rounded" />
