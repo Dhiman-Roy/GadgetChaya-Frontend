@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function DesktopNav(props) {
     const [uniqueBrandName, setUniqueBrandName] = useState([]);
-
+    const [selectedCategory, setSelectedCategory] = useState(null);
     const [showBrand, setShowBrand] = useState(false);
     const category = props.productData.map(data => data.category);
     const uniqueCategory = [...new Set(category)];
@@ -13,6 +13,7 @@ function DesktopNav(props) {
         const uniqueBrand = [...new Set(brandName)];
         setUniqueBrandName(uniqueBrand);
         setShowBrand(true);
+        setSelectedCategory(category);
 
     }
     const brandCloseHandler = () => setShowBrand(false);
@@ -20,20 +21,22 @@ function DesktopNav(props) {
         setShowBrand(true);
     }
     const brandContent = uniqueBrandName.map(data => {
-        return <div onMouseEnter={brandContentHandler} onMouseLeave={brandCloseHandler}>{data}</div>
+        return <div className='cursor-pointer' onMouseEnter={brandContentHandler} onMouseLeave={brandCloseHandler}>{data}</div>
     })
 
     const content = uniqueCategory.map((data) => {
-        return <div>
-            <div onMouseEnter={() => brandHandler(data)} onMouseLeave={brandCloseHandler}>{data}</div>
-
+        return (<div className='flex flex-col text-center'>
+            <div className='cursor-pointer min-w-28' onMouseEnter={() => brandHandler(data)} onMouseLeave={brandCloseHandler}>{data}</div>
+            {selectedCategory === data && showBrand && <div className='cursor-pointer' onMouseEnter={brandContentHandler} onMouseLeave={brandCloseHandler}>{brandContent}</div>}
         </div>
+        )
+
     })
 
     return (<div className='flex flex-col w-full justify-between'>
 
-        <div className='flex justify-between w-full gap-2 flex-wrap bg'>{content}</div>
-        {showBrand && (<div >{brandContent}</div>)}
+        <div className='flex justify-between w-full gap-2 flex-wrap '>{content}</div>
+        {/* {showBrand && (<div className='top-0 w-32 left-28' >{brandContent}</div>)} */}
     </div>
     )
 }
