@@ -8,8 +8,8 @@ function MainHeader(props) {
     setVal(event.target[0].value);
   };
   return (
-    <div className=" bg-black pb-2 ">
-      <div className=" flex items-center justify-between pr-3">
+    <div className=" bg-black pb-2 max-w-full">
+      <div className=" flex items-center justify-between pr-3 max-w-[1440px] mx-auto ">
         <div className="flex gap-2 items-center pl-3">
           <button
             onClick={props.onOpen}
@@ -48,10 +48,7 @@ function MainHeader(props) {
 
       <div className="border-gray-600 rounded  flex justify-center md:hidden">
         <form className="flex items-center gap-1" onSubmit={submitHandler}>
-          <input
-            type="text"
-            className="bg-white rounded font-bold p-1"
-          ></input>
+          <input type="text" className="bg-white rounded font-bold p-1"></input>
           <button type="submit" className="rounded">
             <FaSearch className="bg-amber-600 w-8 h-8 p-1 rounded" />
           </button>
