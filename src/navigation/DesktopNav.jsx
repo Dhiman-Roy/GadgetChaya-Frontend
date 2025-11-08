@@ -51,7 +51,7 @@ function DesktopNav(props) {
         </div>
         {selectedCategory === data && showBrand && (
           <div
-            className="cursor-pointer absolute top-10 min-w-32 text-center p-1.5 text-xl rounded-xl bg-gray-300/40"
+            className="cursor-pointer absolute top-10 min-w-32 text-center p-1.5 text-xl rounded-xl bg-gray-300/97 z-20"
             onMouseEnter={brandContentHandler}
             onMouseLeave={brandCloseHandler}
           >
