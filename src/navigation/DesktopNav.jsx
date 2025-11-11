@@ -1,44 +1,57 @@
 import React, { useState } from "react";
 
 function DesktopNav(props) {
-  const [uniqueBrandName, setUniqueBrandName] = useState([]);
+  const [uniqueSubCategoryName, setUniqueSubCategoryName] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [showBrand, setShowBrand] = useState(false);
+  const [showSubCategory, setShowSubCategory] = useState(false);
   const [activeLink, setActiveLink] = useState(false);
-  const category = props.productData.map((data) => data.category);
+  const category = props.categoryData.map((data) => data.name);
   const uniqueCategory = [...new Set(category)];
-  console.log(uniqueCategory);
+
   const brandHandler = (category) => {
-    const selectedCategory = props.productData.filter(
-      (data) => data.category === category
+    const selectedCategory = props.categoryData.filter(
+      (data) => data?.name === category
     );
-    const brandName = selectedCategory.map((data) => data.brand);
-    const uniqueBrand = [...new Set(brandName)];
-    setUniqueBrandName(uniqueBrand);
-    setShowBrand(true);
+    console.log(selectedCategory);
+    const subCategories = selectedCategory.map((data) => {
+      console.log(data);
+      if (data.subCategories) {
+        return data.subCategories.map((subData) => subData.name);
+      }
+      return null;
+    });
+
+    const uniqueSubCategories = [...new Set(subCategories)];
+    setUniqueSubCategoryName(uniqueSubCategories);
+    setShowSubCategory(true);
     setSelectedCategory(category);
     setActiveLink(true);
   };
   const brandCloseHandler = () => {
-    setShowBrand(false);
+    setShowSubCategory(false);
     setActiveLink(false);
   };
   const brandContentHandler = () => {
-    setShowBrand(true);
+    setShowSubCategory(true);
     setActiveLink(true);
   };
-  const brandContent = uniqueBrandName.map((data) => {
-    return (
-      <div
-        className="cursor-pointer pb-1 hover:bg-amber-600/70 rounded-xs"
-        onMouseEnter={brandContentHandler}
-        onMouseLeave={brandCloseHandler}
-      >
-        {data}
-      </div>
+  const brandContent =
+    uniqueSubCategoryName.length === 0 ? (
+      <div></div>
+    ) : (
+      uniqueSubCategoryName[0].map((data) => {
+        return (
+          <div
+            className="cursor-pointer pb-1 hover:bg-amber-600/70 rounded-xs"
+            onMouseEnter={brandContentHandler}
+            onMouseLeave={brandCloseHandler}
+          >
+            {data}
+          </div>
+        );
+      })
     );
-  });
-
+  console.log(uniqueSubCategoryName);
   const content = uniqueCategory.map((data) => {
     return (
       <div className="flex flex-col text-center text-xl  font-bold py-1 ">
@@ -49,9 +62,9 @@ function DesktopNav(props) {
         >
           {data}
         </div>
-        {selectedCategory === data && showBrand && (
+        {selectedCategory === data && showSubCategory && (
           <div
-            className="cursor-pointer absolute top-10 min-w-32 text-center p-1.5 text-xl rounded-xl bg-gray-300/97 z-20"
+            className="cursor-pointer absolute block top-10 min-w-32 text-center p-1.5 text-xl rounded-xl bg-gray-300/97 z-20"
             onMouseEnter={brandContentHandler}
             onMouseLeave={brandCloseHandler}
           >

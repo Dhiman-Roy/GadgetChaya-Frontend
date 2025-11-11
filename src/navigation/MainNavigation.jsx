@@ -5,23 +5,24 @@ import SideDrawer from "./SideDrawer";
 import DesktopNav from "./DesktopNav";
 
 function MainNavigation(props) {
-  const [productData, setProductData] = useState([]);
+  const [categoryData, setCategoryData] = useState([]);
   const { sendRequest } = useHttpClient();
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await sendRequest("/products.json");
-      setProductData(data);
+      const data = await sendRequest("/categories.json");
+      setCategoryData(data);
     };
     fetchData();
   }, []);
 
   return (
     <>
-      <MainHeader {...props} productData={productData} />
-      {props.drawer && <SideDrawer productData={productData} {...props} />}
-      <div className="hidden lg:flex"><DesktopNav productData={productData} /> </div>
-
+      <MainHeader {...props} categoryData={categoryData} />
+      {props.drawer && <SideDrawer categoryData={categoryData} {...props} />}
+      <div className="hidden lg:flex">
+        <DesktopNav categoryData={categoryData} />
+      </div>
     </>
   );
 }

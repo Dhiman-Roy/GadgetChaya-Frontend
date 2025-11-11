@@ -7,22 +7,22 @@ function SideDrawer(props) {
 
   const [activeClick, setActiveClick] = useState(false);
 
-  const productArray = props.productData.map((data) => {
-    return data.category;
+  const categoryArray = props.categoryData.map((data) => {
+    return data.name;
   });
   console.log("render");
   console.log(activeClick);
-  const productCategory = [...new Set(productArray)];
+  const uniqueCategoryArray = [...new Set(categoryArray)];
 
   const filteredData = (data) => {
-    return props.productData.filter((p) => p.category === data);
+    return props.categoryData.filter((c) => c.name === data);
   };
 
-  const drawerContent = productCategory.map((data, index) => {
+  const drawerContent = uniqueCategoryArray.map((data, index) => {
     return (
       <SideDrawerCategory
         items={data}
-        productData={filteredData(data)}
+        categoryData={filteredData(data)}
         key={index}
         id={index}
         activeClick={activeClick}
@@ -43,8 +43,6 @@ function SideDrawer(props) {
         </div>
         <div className="overflow-y-auto h-full ">{drawerContent}</div>
       </div>
-
-
     </div>
   );
 }

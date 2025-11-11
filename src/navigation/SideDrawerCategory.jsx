@@ -3,15 +3,24 @@ import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 function SideDrawerCategory(props) {
   console.log(props.activeClick);
 
-  const brandName = props.productData.map((product) => product.brand);
-  const uniqueBrand = [...new Set(brandName)];
+  const subCategoryName = props.categoryData.map((subC) => {
+    console.log(subC);
+
+    return subC.subCategories.map((data) => {
+      console.log(data.name);
+      return data.name;
+    });
+  });
+
+  const uniqueSubCategory = [...new Set(subCategoryName[0])];
 
   const clickHandler = (id) => {
     props.setActiveClick(props.activeClick === id ? null : id);
   };
   console.log(props.productItems);
-  const content = uniqueBrand.map((brand, index) => {
-    return <ShowBrand brandName={brand} key={index} />;
+  const content = uniqueSubCategory.map((subcategory, index) => {
+    console.log(subcategory);
+    return <ShowBrand subCategoryName={subcategory} key={index} {...props} />;
   });
 
   return (

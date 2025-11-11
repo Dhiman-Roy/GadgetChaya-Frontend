@@ -1,0 +1,156 @@
+[
+  {
+    "_id": "cat001",
+    "name": "Speakers",
+    "subCategories": [
+      {
+        "_id": "sub001",
+        "name": "Bluetooth Speakers",
+        "subSubCategories": [
+          { "_id": "subsub001", "name": "JBL" },
+          { "_id": "subsub002", "name": "Sony" },
+          { "_id": "subsub003", "name": "Bose" }
+        ]
+      },
+      {
+        "_id": "sub002",
+        "name": "Smart Speakers",
+        "subSubCategories": [
+          { "_id": "subsub004", "name": "Amazon Echo" },
+          { "_id": "subsub005", "name": "Google Nest" }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "cat002",
+    "name": "Smartphones",
+    "subCategories": [
+      { "_id": "sub003", "name": "Samsung" },
+      { "_id": "sub004", "name": "Apple" },
+      { "_id": "sub005", "name": "Xiaomi" },
+      { "_id": "sub006", "name": "OnePlus" },
+      { "_id": "sub007", "name": "Oppo" },
+      { "_id": "sub008", "name": "Realme" }
+    ]
+  },
+  {
+    "_id": "cat003",
+    "name": "Laptops",
+    "subCategories": [
+      {
+        "_id": "sub009",
+        "name": "Gaming Laptops",
+        "subSubCategories": [
+          { "_id": "subsub006", "name": "Asus" },
+          { "_id": "subsub007", "name": "Acer" },
+          { "_id": "subsub008", "name": "MSI" },
+          { "_id": "subsub009", "name": "Dell" },
+          { "_id": "subsub010", "name": "HP" }
+        ]
+      },
+      {
+        "_id": "sub010",
+        "name": "Ultrabooks",
+        "subSubCategories": [
+          { "_id": "subsub011", "name": "Apple" },
+          { "_id": "subsub012", "name": "Dell" },
+          { "_id": "subsub013", "name": "HP" },
+          { "_id": "subsub014", "name": "Lenovo" }
+        ]
+      },
+      {
+        "_id": "sub011",
+        "name": "2-in-1 Laptops",
+        "subSubCategories": [
+          { "_id": "subsub015", "name": "HP" },
+          { "_id": "subsub016", "name": "Lenovo" },
+          { "_id": "subsub017", "name": "Dell" }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "cat004",
+    "name": "Tablets",
+    "subCategories": [
+      { "_id": "sub012", "name": "Samsung" },
+      { "_id": "sub013", "name": "Apple" },
+      { "_id": "sub014", "name": "Lenovo" }
+    ]
+  },
+  {
+    "_id": "cat005",
+    "name": "Smartwatches",
+    "subCategories": [
+      {
+        "_id": "sub015",
+        "name": "Fitness Watches",
+        "subSubCategories": [
+          { "_id": "subsub018", "name": "Fitbit" },
+          { "_id": "subsub019", "name": "Garmin" },
+          { "_id": "subsub020", "name": "Samsung" }
+        ]
+      },
+      { "_id": "sub016", "name": "Apple Watch" },
+      { "_id": "sub017", "name": "Luxury Watches" }
+    ]
+  },
+  {
+    "_id": "cat006",
+    "name": "Headphones",
+    "subCategories": [
+      { "_id": "sub018", "name": "Sony" },
+      { "_id": "sub019", "name": "Bose" },
+      { "_id": "sub020", "name": "JBL" },
+      { "_id": "sub021", "name": "Beats" }
+    ]
+  },
+  {
+    "_id": "cat007",
+    "name": "Cameras",
+    "subCategories": [
+      {
+        "_id": "sub022",
+        "name": "DSLR",
+        "subSubCategories": [
+          { "_id": "subsub021", "name": "Canon" },
+          { "_id": "subsub022", "name": "Nikon" }
+        ]
+      },
+      {
+        "_id": "sub023",
+        "name": "Mirrorless",
+        "subSubCategories": [
+          { "_id": "subsub023", "name": "Sony" },
+          { "_id": "subsub024", "name": "Fujifilm" }
+        ]
+      },
+      { "_id": "sub024", "name": "Action Cameras" }
+    ]
+  },
+  {
+    "_id": "cat008",
+    "name": "Gaming Consoles",
+    "subCategories": [
+      { "_id": "sub025", "name": "PlayStation" },
+      { "_id": "sub026", "name": "Xbox" },
+      { "_id": "sub027", "name": "Nintendo" }
+    ]
+  },
+  {
+    "_id": "cat009",
+    "name": "Accessories",
+    "subCategories": [
+      { "_id": "sub028", "name": "Chargers" },
+      { "_id": "sub029", "name": "Cables" },
+      { "_id": "sub030", "name": "Cases" },
+      { "_id": "sub031", "name": "Power Banks" }
+    ]
+  },
+  {
+    "_id": "cat010",
+    "name": "Gift Cards",
+    "subCategories": []
+  }
+]
