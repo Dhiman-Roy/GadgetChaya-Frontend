@@ -8,7 +8,7 @@ function DesktopNav(props) {
   const category = props.categoryData.map((data) => data.name);
   const uniqueCategory = [...new Set(category)];
 
-  const brandHandler = (category) => {
+  const subCategoryHandler = (category) => {
     const selectedCategory = props.categoryData.filter(
       (data) => data?.name === category
     );
@@ -27,15 +27,15 @@ function DesktopNav(props) {
     setSelectedCategory(category);
     setActiveLink(true);
   };
-  const brandCloseHandler = () => {
+  const subCategoryCloseHandler = () => {
     setShowSubCategory(false);
     setActiveLink(false);
   };
-  const brandContentHandler = () => {
+  const subCategoryContentHandler = () => {
     setShowSubCategory(true);
     setActiveLink(true);
   };
-  const brandContent =
+  const subCategoryContent =
     uniqueSubCategoryName.length === 0 ? (
       <div></div>
     ) : (
@@ -43,8 +43,8 @@ function DesktopNav(props) {
         return (
           <div
             className="cursor-pointer pb-1 hover:bg-amber-600/70 rounded-xs"
-            onMouseEnter={brandContentHandler}
-            onMouseLeave={brandCloseHandler}
+            onMouseEnter={subCategoryContentHandler}
+            onMouseLeave={subCategoryCloseHandler}
           >
             {data}
           </div>
@@ -57,18 +57,18 @@ function DesktopNav(props) {
       <div className="flex flex-col text-center text-xl  font-bold py-1 ">
         <div
           className="cursor-pointer min-w-32 hover:bg-amber-600/70 rounded-xs py-0.5"
-          onMouseEnter={() => brandHandler(data)}
-          onMouseLeave={brandCloseHandler}
+          onMouseEnter={() => subCategoryHandler(data)}
+          onMouseLeave={subCategoryCloseHandler}
         >
           {data}
         </div>
         {selectedCategory === data && showSubCategory && (
           <div
             className="cursor-pointer absolute block top-10 min-w-32 text-center p-1.5 text-xl rounded-xl bg-gray-300/97 z-20"
-            onMouseEnter={brandContentHandler}
-            onMouseLeave={brandCloseHandler}
+            onMouseEnter={subCategoryContentHandler}
+            onMouseLeave={subCategoryCloseHandler}
           >
-            {brandContent}
+            {subCategoryContent}
           </div>
         )}
       </div>

@@ -3,6 +3,7 @@ import MainHeader from "./MainHeader";
 import { useHttpClient } from "../hooks/httpHooks";
 import SideDrawer from "./SideDrawer";
 import DesktopNav from "./DesktopNav";
+import DesktopNavNew from "./DektopNavNew";
 
 function MainNavigation(props) {
   const [categoryData, setCategoryData] = useState([]);
@@ -22,6 +23,9 @@ function MainNavigation(props) {
       {props.drawer && <SideDrawer categoryData={categoryData} {...props} />}
       <div className="hidden lg:flex">
         <DesktopNav categoryData={categoryData} />
+      </div>
+      <div className="hidden lg:flex mt-8">
+        <DesktopNavNew categoryData={categoryData} />
       </div>
     </>
   );
