@@ -1,29 +1,36 @@
 import React, { useState } from "react";
 import DesktopNavSubCategory from "./DesktopNavSubCategory";
-function DesktopNavCategory({
+import SideDrawerNavSubCategory from "./SideDrawerNavSubCategory";
+import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
+function SideDrawerNavCategory({
   categoryData,
   subCatActive,
   subCatActiveHandler,
   subCatCloseHandler,
+  drawer,
 }) {
+  const [drawerSlider, setDrawerSlider] = useState(false);
   const [subSubCatActive, setSubSubCatActive] = useState();
+
   const subSubCatActiveHandler = (data) => setSubSubCatActive(data);
   const subSubCatCloseHandler = () => setSubSubCatActive(false);
+
+  const clickHandler = (data) => {
+    subCatActiveHandler(data);
+  };
+  console.log(drawer);
   return (
-    <div className="w-full bg-gray-300/95 text-bold shadow-gray-400 shadow-xl ">
-      <div className="flex justify-between w-full  ">
+    <div className="h-full">
+      <div className={`flex flex-col h-full overflow-y-auto  `}>
         {categoryData.map((category, index) => (
-          <div
-            className="  relative min-w-[90px]  cursor-pointer  "
-            onMouseEnter={() => subCatActiveHandler(category.name)}
-            onMouseLeave={subCatCloseHandler}
-          >
-            <div className="flex flex-col gap-2  w-full text-center py-2 xl:font-semibold xl:text-lg shrink-0  overflow-hidden ">
-              {category.name}
+          <div className="  relative min-w-[90px]  cursor-pointer  ">
+            <div className="flex justify-between px-2  w-full py-2 font-bold ">
+              <div className="w-full px-1">{category.name}</div>
+              <IoIosArrowForward onClick={() => clickHandler(category.name)} />
             </div>
             {subCatActive === category.name &&
               category.subCategories.length > 0 && (
-                <DesktopNavSubCategory
+                <SideDrawerNavSubCategory
                   category={category}
                   subSubCatActive={subSubCatActive}
                   subSubCatActiveHandler={subSubCatActiveHandler}
@@ -39,4 +46,4 @@ function DesktopNavCategory({
   );
 }
 
-export default DesktopNavCategory;
+export default SideDrawerNavCategory;

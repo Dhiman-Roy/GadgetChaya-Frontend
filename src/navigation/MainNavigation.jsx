@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import MainHeader from "./MainHeader";
 import { useHttpClient } from "../hooks/httpHooks";
 import SideDrawer from "./SideDrawer";
-import DesktopNav from "./DesktopNav";
+import SideDrawerNav from "./SideDrawerNav";
+
 import DesktopNavNew from "./DektopNavNew";
 
 function MainNavigation(props) {
@@ -20,11 +21,15 @@ function MainNavigation(props) {
   return (
     <>
       <MainHeader {...props} categoryData={categoryData} />
-      {props.drawer && <SideDrawer categoryData={categoryData} {...props} />}
-      <div className="hidden lg:flex">
-        <DesktopNav categoryData={categoryData} />
+
+      <div
+        className={`fixed top-0 left-0  h-full max-w-[425px]  bg-blue-800 z-40 shadow-xl transition-transform duration-500 ease-in-out
+    ${props.drawer ? "translate-x-0" : "-translate-x-full"}`}
+      >
+        <SideDrawerNav categoryData={categoryData} {...props} />
       </div>
-      <div className="hidden lg:flex mt-8">
+
+      <div className="hidden lg:flex ">
         <DesktopNavNew categoryData={categoryData} />
       </div>
     </>
