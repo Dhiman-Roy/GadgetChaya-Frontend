@@ -16,7 +16,7 @@ function SideDrawerNavCategory({
   const subSubCatCloseHandler = () => setSubSubCatActive(false);
 
   const clickHandler = (data) => {
-    subCatActiveHandler(data);
+    subCatActive ? subCatCloseHandler() : subCatActiveHandler(data);
   };
   console.log(drawer);
   return (
@@ -24,7 +24,7 @@ function SideDrawerNavCategory({
       <div className={`flex flex-col h-full overflow-y-auto  `}>
         {categoryData.map((category, index) => (
           <div className="  relative min-w-[90px]  cursor-pointer  ">
-            <div className="flex justify-between px-2  w-full py-2 font-bold ">
+            <div className="flex justify-between items-center px-2  w-full py-2 font-bold ">
               <div className="w-full px-1">{category.name}</div>
               <IoIosArrowForward onClick={() => clickHandler(category.name)} />
             </div>

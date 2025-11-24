@@ -23,7 +23,7 @@ function MainNavigation(props) {
       <MainHeader {...props} categoryData={categoryData} />
 
       <div
-        className={`fixed top-0 left-0  h-full max-w-[425px]  bg-blue-800 z-40 shadow-xl transition-transform duration-500 ease-in-out
+        className={`fixed top-0 left-0  h-full w-[260px]  bg-violet-50 z-40 shadow-xl transition-transform duration-500 ease-in-out
     ${props.drawer ? "translate-x-0" : "-translate-x-full"}`}
       >
         <SideDrawerNav categoryData={categoryData} {...props} />

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 
 function SideDrawerNavSubCategory({
   category,
@@ -12,12 +13,17 @@ function SideDrawerNavSubCategory({
     <div className=" z-30  w-full bg-indigo-200/95 rounded-xs ">
       {category.subCategories.map((subcat) => {
         return (
-          <div
-            className="flex flex-col  cursor-pointer r border-b-[1px] border-b-neutral-400"
-            onClick={() => subSubCatActiveHandler(subcat.name)}
-          >
-            <div className=" p-1 px-3  hover:text-amber-600 ">
-              {subcat.name}
+          <div className="flex flex-col  cursor-pointer r border-b-[1px] border-b-neutral-400">
+            <div className="flex justify-between items-center px-2">
+              <div className=" p-1 px-3  hover:text-amber-600 ">
+                {subcat.name}
+              </div>
+              {console.log(subcat)}
+              {subcat?.subSubCategories?.length > 0 && (
+                <IoIosArrowForward
+                  onClick={() => subSubCatActiveHandler(subcat.name)}
+                />
+              )}
             </div>
             <div className={`cursor-pointer  rounded-xl `}>
               <div className="rounded-xs bg-stone-200/95">
