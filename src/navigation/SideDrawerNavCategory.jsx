@@ -4,41 +4,52 @@ import SideDrawerNavSubCategory from "./SideDrawerNavSubCategory";
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 function SideDrawerNavCategory({
   categoryData,
-  subCatActive,
-  subCatActiveHandler,
-  subCatCloseHandler,
+
   drawer,
 }) {
   const [drawerSlider, setDrawerSlider] = useState(false);
-  const [subSubCatActive, setSubSubCatActive] = useState();
-
-  const subSubCatActiveHandler = (data) => setSubSubCatActive(data);
-  const subSubCatCloseHandler = () => setSubSubCatActive(false);
+  const [subCatActive, setSubCatActive] = useState(false);
+  // const [subSubCatActive, setSubSubCatActive] = useState();
+  const subCatActiveHandler = (data) => {
+    setSubCatActive(data);
+  };
+  // const subCatCloseHandler = () => setSubCatActive(false);
+  const subCatCloseHandler = () => setDrawerSlider(false);
 
   const clickHandler = (data) => {
-    subCatActive ? subCatCloseHandler() : subCatActiveHandler(data);
+    // subCatActive ? subCatCloseHandler() : subCatActiveHandler(data);
+    drawerSlider ? subCatCloseHandler() : setDrawerSlider(true);
+    subCatActiveHandler(data);
   };
   console.log(drawer);
   return (
     <div className="h-full">
-      <div className={`flex flex-col h-full overflow-y-auto  `}>
+      <div className={`flex flex-col   `}>
         {categoryData.map((category, index) => (
-          <div className="  relative min-w-[90px]  cursor-pointer  ">
-            <div className="flex justify-between items-center px-2  w-full py-2 font-bold ">
+          <div className={`   min-w-[90px]  cursor-pointer  `}>
+            <div
+              className={`   flex justify-between items-center px-2  w-full py-2 font-bold   cursor-pointer   `}
+            >
               <div className="w-full px-1">{category.name}</div>
               <IoIosArrowForward onClick={() => clickHandler(category.name)} />
             </div>
-            {subCatActive === category.name &&
-              category.subCategories.length > 0 && (
-                <SideDrawerNavSubCategory
-                  category={category}
-                  subSubCatActive={subSubCatActive}
-                  subSubCatActiveHandler={subSubCatActiveHandler}
-                  subSubCatCloseHandler={subSubCatCloseHandler}
-                  categoryDataLength={categoryData.length}
-                  index={index}
-                />
-              )}
+            <div
+              className={`cursor-pointer overflow-hidden top-0  transition-all ease-out duration-200 ${
+                drawerSlider ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+              } `}
+            >
+              {subCatActive === category.name &&
+                category.subCategories.length > 0 && (
+                  <div>
+                    <SideDrawerNavSubCategory
+                      category={category}
+                      // subSubCatActive={subSubCatActive}
+                      categoryDataLength={categoryData.length}
+                      index={index}
+                    />
+                  </div>
+                )}
+            </div>
           </div>
         ))}
       </div>

@@ -3,10 +3,7 @@ import SideDrawerNavCategory from "./SideDrawerNavCategory";
 import { MdCancelPresentation } from "react-icons/md";
 
 function SideDrawerNav(props) {
-  const [subCatActive, setSubCatActive] = useState(false);
   console.log(props.categoryData);
-  const subCatActiveHandler = (data) => setSubCatActive(data);
-  const subCatCloseHandler = () => setSubCatActive(false);
 
   return (
     <div className="">
@@ -16,9 +13,8 @@ function SideDrawerNav(props) {
       </div>
       <SideDrawerNavCategory
         categoryData={props.categoryData}
-        subCatActive={subCatActive}
-        subCatActiveHandler={subCatActiveHandler}
-        subCatCloseHandler={subCatCloseHandler}
+        // subCatActive={subCatActive}
+        // setSubCatActive={setSubCatActive}
         {...props}
       />
     </div>

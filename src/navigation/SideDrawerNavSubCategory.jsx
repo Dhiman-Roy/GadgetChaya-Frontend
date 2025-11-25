@@ -3,12 +3,16 @@ import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 
 function SideDrawerNavSubCategory({
   category,
-  subSubCatActive,
-  subSubCatActiveHandler,
-  subSubCatCloseHandler,
+
   categoryDataLength,
   index,
 }) {
+  const [slider, setSlider] = useState(false);
+  const [subSubCatActive, setSubSubCatActive] = useState();
+  const clickHandler = (data) => {
+    slider ? setSlider(false) : setSlider(true);
+    setSubSubCatActive(data);
+  };
   return (
     <div className=" z-30  w-full bg-indigo-200/95 rounded-xs ">
       {category.subCategories.map((subcat) => {
@@ -20,19 +24,22 @@ function SideDrawerNavSubCategory({
               </div>
               {console.log(subcat)}
               {subcat?.subSubCategories?.length > 0 && (
-                <IoIosArrowForward
-                  onClick={() => subSubCatActiveHandler(subcat.name)}
-                />
+                <IoIosArrowForward onClick={() => clickHandler(subcat.name)} />
               )}
             </div>
             <div className={`cursor-pointer  rounded-xl `}>
-              <div className="rounded-xs bg-stone-200/95">
+              <div
+                className={`rounded-xs bg-stone-200/95 transition-all ease-in-out duration-200 overflow-hidden ${
+                  slider ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                } `}
+              >
                 {subcat?.subSubCategories?.length > 0 &&
                   subSubCatActive === subcat.name &&
+                  slider &&
                   subcat.subSubCategories.map((subSubCat) => (
                     <div
                       className="flex flex-col   px-3 py-2 hover:text-amber-600 "
-                      onClick={() => subSubCatActiveHandler(subcat.name)}
+                      // onClick={() => subSubCatActiveHandler(subcat.name)}
                     >
                       <div className="px-5"> {subSubCat.name}</div>
                     </div>
