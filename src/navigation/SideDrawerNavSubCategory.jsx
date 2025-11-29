@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 
-function SideDrawerNavSubCategory({
-  category,
-
-  categoryDataLength,
-  index,
-}) {
-  const [slider, setSlider] = useState(false);
+function SideDrawerNavSubCategory({ category }) {
   const [subSubCatActive, setSubSubCatActive] = useState();
+
   const clickHandler = (data) => {
-    slider ? setSlider(false) : setSlider(true);
-    setSubSubCatActive(data);
+    subSubCatActive === data
+      ? setSubSubCatActive(null)
+      : setSubSubCatActive(data);
   };
   return (
     <div className=" z-30  w-full bg-indigo-200/95 rounded-xs ">
@@ -30,12 +26,11 @@ function SideDrawerNavSubCategory({
             <div className={`cursor-pointer  rounded-xl `}>
               <div
                 className={`rounded-xs bg-stone-200/95 transition-all ease-in-out duration-200 overflow-hidden ${
-                  slider ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  subSubCatActive ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 } `}
               >
                 {subcat?.subSubCategories?.length > 0 &&
                   subSubCatActive === subcat.name &&
-                  slider &&
                   subcat.subSubCategories.map((subSubCat) => (
                     <div
                       className="flex flex-col   px-3 py-2 hover:text-amber-600 "

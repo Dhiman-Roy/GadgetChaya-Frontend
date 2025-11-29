@@ -2,26 +2,17 @@ import React, { useState } from "react";
 import DesktopNavSubCategory from "./DesktopNavSubCategory";
 import SideDrawerNavSubCategory from "./SideDrawerNavSubCategory";
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
-function SideDrawerNavCategory({
-  categoryData,
-
-  drawer,
-}) {
-  const [drawerSlider, setDrawerSlider] = useState(false);
-  const [subCatActive, setSubCatActive] = useState(false);
+function SideDrawerNavCategory({ categoryData }) {
+  const [subCatActive, setSubCatActive] = useState(null);
   // const [subSubCatActive, setSubSubCatActive] = useState();
-  const subCatActiveHandler = (data) => {
-    setSubCatActive(data);
-  };
+
   // const subCatCloseHandler = () => setSubCatActive(false);
-  const subCatCloseHandler = () => setDrawerSlider(false);
 
   const clickHandler = (data) => {
     // subCatActive ? subCatCloseHandler() : subCatActiveHandler(data);
-    drawerSlider ? subCatCloseHandler() : setDrawerSlider(true);
-    subCatActiveHandler(data);
+    subCatActive === data ? setSubCatActive(null) : setSubCatActive(data);
   };
-  console.log(drawer);
+  console.log(subCatActive);
   return (
     <div className="h-full">
       <div className={`flex flex-col   `}>
@@ -34,8 +25,10 @@ function SideDrawerNavCategory({
               <IoIosArrowForward onClick={() => clickHandler(category.name)} />
             </div>
             <div
-              className={`cursor-pointer overflow-hidden top-0  transition-all ease-out duration-200 ${
-                drawerSlider ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+              className={`cursor-pointer overflow-hidden top-0  transition-all ease-out duration-600 ${
+                subCatActive === null
+                  ? "max-h-0 opacity-0"
+                  : "max-h-96 opacity-100"
               } `}
             >
               {subCatActive === category.name &&
