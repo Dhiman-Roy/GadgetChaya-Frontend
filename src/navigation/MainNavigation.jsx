@@ -3,6 +3,7 @@ import MainHeader from "./MainHeader";
 import { useHttpClient } from "../hooks/httpHooks";
 import SideDrawer from "./SideDrawer";
 import SideDrawerNav from "./SideDrawerNav";
+import { Outlet } from "react-router";
 
 import DesktopNavNew from "./DektopNavNew";
 
