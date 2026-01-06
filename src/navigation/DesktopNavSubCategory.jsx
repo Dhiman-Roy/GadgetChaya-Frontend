@@ -1,13 +1,24 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 
 function DesktopNavSubCategory({
   category,
+  categoryName,
   subSubCatActive,
   subSubCatActiveHandler,
   subSubCatCloseHandler,
-  categoryDataLength,
+
   index,
 }) {
+  const navigate = useNavigate();
+  const linkHandler = (data) => {
+    if (data.includes(" ")) {
+      const newUrl = data.split(" ").join("-");
+      navigate(newUrl);
+    } else {
+      navigate(data);
+    }
+  };
   return (
     <div className="absolute top-10 z-30 text-center w-full bg-indigo-200/95 rounded-xs ">
       {category.subCategories.map((subcat) => {
@@ -17,7 +28,14 @@ function DesktopNavSubCategory({
             onMouseEnter={() => subSubCatActiveHandler(subcat.name)}
             onMouseLeave={subSubCatCloseHandler}
           >
-            <div className=" p-1  hover:text-amber-600 ">{subcat.name}</div>
+            <div
+              onClick={() =>
+                linkHandler(`category/${categoryName}/${subcat.name}`)
+              }
+              className=" p-1  hover:text-amber-600 "
+            >
+              {subcat.name}
+            </div>
             <div
               className={`cursor-pointer absolute top-0  rounded-xl ${
                 index > 4
@@ -34,7 +52,16 @@ function DesktopNavSubCategory({
                       onMouseEnter={() => subSubCatActiveHandler(subcat.name)}
                       onMouseLeave={subSubCatCloseHandler}
                     >
-                      <div> {subSubCat.name}</div>
+                      <div
+                        onClick={() =>
+                          linkHandler(
+                            `category/${categoryName}/${subcat.name}/${subSubCat.name}`
+                          )
+                        }
+                      >
+                        {" "}
+                        {subSubCat.name}
+                      </div>
                     </div>
                   ))}
               </div>

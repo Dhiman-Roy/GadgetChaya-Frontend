@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router";
 import DesktopNavSubCategory from "./DesktopNavSubCategory";
 import SideDrawerNavSubCategory from "./SideDrawerNavSubCategory";
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 function SideDrawerNavCategory({ categoryData }) {
   const [subCatActive, setSubCatActive] = useState(null);
+  const navigate = useNavigate();
   // const [subSubCatActive, setSubSubCatActive] = useState();
 
   // const subCatCloseHandler = () => setSubCatActive(false);
@@ -12,7 +14,14 @@ function SideDrawerNavCategory({ categoryData }) {
     // subCatActive ? subCatCloseHandler() : subCatActiveHandler(data);
     subCatActive === data ? setSubCatActive(null) : setSubCatActive(data);
   };
-  console.log(subCatActive);
+  const linkHandler = (data) => {
+    if (data.includes(" ")) {
+      const newUrl = data.split(" ").join("-");
+      navigate(newUrl);
+    } else {
+      navigate(data);
+    }
+  };
   return (
     <div className="h-full">
       <div className={`flex flex-col   `}>
@@ -21,7 +30,12 @@ function SideDrawerNavCategory({ categoryData }) {
             <div
               className={`   flex justify-between items-center px-2  w-full py-2 font-bold   cursor-pointer   `}
             >
-              <div className="w-full px-1">{category.name}</div>
+              <div
+                className="w-full px-1"
+                onClick={() => linkHandler(`category/${category.name}`)}
+              >
+                {category.name}
+              </div>
               <IoIosArrowForward onClick={() => clickHandler(category.name)} />
             </div>
             <div
@@ -36,6 +50,7 @@ function SideDrawerNavCategory({ categoryData }) {
                   <div>
                     <SideDrawerNavSubCategory
                       category={category}
+                      categoryName={category.name}
                       // subSubCatActive={subSubCatActive}
                       categoryDataLength={categoryData.length}
                       index={index}

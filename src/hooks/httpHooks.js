@@ -20,7 +20,7 @@ export const useHttpClient = () => {
         activeHttpRequests.current = activeHttpRequests.current.filter(
           (ctrl) => ctrl !== httpAbortController
         );
-        if (!response) {
+        if (!response.ok) {
           throw new Error("Fetching data failed");
         }
 

@@ -1,13 +1,24 @@
 import { Outlet, RouterProvider } from "react-router";
 import MainNavigation from "../navigation/MainNavigation";
 import Backdrop from "../shared/uiElements/Backdrop";
+import { useHttpClient } from "../hooks/httpHooks";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Layout() {
+  const [productData, setProductData] = useState([]);
   const [drawer, setDrawer] = useState(false);
+  const { sendRequest } = useHttpClient();
   const openDrawer = () => setDrawer(true);
   const closeDrawer = () => setDrawer(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await sendRequest("/products.json");
+      setProductData(data);
+    };
+    fetchData();
+  }, [sendRequest]);
 
   return (
     <div className="max-w-[1440px] mx-auto">
@@ -21,7 +32,7 @@ function Layout() {
         onClose={closeDrawer}
         drawer={drawer}
       />
-      <Outlet />
+      <Outlet context={productData} />
     </div>
   );
 }

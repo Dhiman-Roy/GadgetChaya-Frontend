@@ -1,12 +1,16 @@
 import React, { useState } from "react";
+import { Link } from "react-router";
 import { FaUser, FaSearch } from "react-icons/fa";
+import GadgetChayaLogo from "/GadgetChayaLogo.png";
 
 function MainHeader(props) {
   const [val, setVal] = useState();
+
   const submitHandler = (event) => {
     event.preventDefault();
     setVal(event.target[0].value);
   };
+
   return (
     <div className=" bg-black pb-2 max-w-full">
       <div className=" flex items-center justify-between pr-3 max-w-[1440px] mx-auto ">
@@ -19,13 +23,13 @@ function MainHeader(props) {
             <div className="w-full rounded-2xl h-0.5 bg-white"></div>
             <div className="w-full rounded-2xl h-0.5 bg-white"></div>
           </button>
-          <div className="w-26 h-16">
+          <Link to={"/"} className="h-20 w-28">
             <img
               className="w-full h-full bg-cover"
-              src="GadgetChayaLogo.png"
+              src={GadgetChayaLogo}
               alt="website logo"
             />
-          </div>
+          </Link>
         </div>
 
         <div className="border-gray-600 rounded items-center hidden md:flex">
