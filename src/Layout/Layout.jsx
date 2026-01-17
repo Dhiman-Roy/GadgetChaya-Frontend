@@ -32,7 +32,7 @@ function Layout() {
         onClose={closeDrawer}
         drawer={drawer}
       />
-      <Outlet context={productData} />
+      <Outlet context={{ productData }} />
     </div>
   );
 }
