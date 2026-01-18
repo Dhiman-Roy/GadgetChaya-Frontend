@@ -6,7 +6,7 @@ import { useHttpClient } from "../hooks/httpHooks";
 import { useEffect, useState } from "react";
 
 function Layout() {
-  const [productData, setProductData] = useState([]);
+  const [productData, setProductData] = useState();
   const [drawer, setDrawer] = useState(false);
   const { sendRequest } = useHttpClient();
   const openDrawer = () => setDrawer(true);
@@ -14,7 +14,8 @@ function Layout() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await sendRequest("/products.json");
+      const data = await sendRequest("/products1.json");
+      console.log(data);
       setProductData(data);
     };
     fetchData();
