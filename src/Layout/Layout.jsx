@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 function Layout() {
   const [productData, setProductData] = useState();
+  const [categoryData, setCategoryData] = useState();
   const [drawer, setDrawer] = useState(false);
   const { sendRequest } = useHttpClient();
   const openDrawer = () => setDrawer(true);
@@ -15,8 +16,10 @@ function Layout() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await sendRequest("/products1.json");
+      const category = await sendRequest("/categories.json");
       console.log(data);
       setProductData(data);
+      setCategoryData(category);
     };
     fetchData();
   }, [sendRequest]);
@@ -33,7 +36,7 @@ function Layout() {
         onClose={closeDrawer}
         drawer={drawer}
       />
-      <Outlet context={{ productData }} />
+      <Outlet context={{ productData, categoryData }} />
     </div>
   );
 }
